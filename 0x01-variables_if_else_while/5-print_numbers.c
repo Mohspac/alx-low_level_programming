@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 /**
- *main - entry point
- *
- *Return: 0 after printing the function
+ *main-program entry point.
+ *Return:0 no error, non zero if error
  */
 int main(void)
 {
-		int n;
-		for (n = 0; n < 10; n++)
+	char i;
 
-		{
-			printf("%d\n", n);
-		}
-		return (0);
+	for (i = '0'; i <= '9'; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
 }
