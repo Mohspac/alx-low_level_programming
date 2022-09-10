@@ -1,31 +1,37 @@
 #include <stdio.h>
-
 /**
- *main - entry point
- *
- *Return: 0 always
+ *main-program entry point.
+ *Return:0 success, non zero fail
  */
 int main(void)
 {
-	int ch;
-	int n;
-		for (ch = 48; ch <= 57; ch++)
+	int i, k = '0', j;
 
+	for (i = '0'; i <= '9'; i++)
 	{
-			for (n = 49; n <= 57; n++)
+		for (j = k; j <= '9'; j++)
 		{
-			if (n > ch)
+			if (i != j)
 			{
-			putchar(ch);
-			putchar(n);
-			if (ch != 56 || ch != 57)
-			{
-				putchar(44);
-				putchar(32);
+				putchar(i);
+				putchar(j);
 			}
+			if (i == j)
+			{
+				continue;
+			}
+			if (i == '8' && j == '9')
+			{
+				break;
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
 			}
 		}
+		k++;
 	}
-		putchar(10);
-		return (0);
+	putchar('\n');
+	return (0);
 }
