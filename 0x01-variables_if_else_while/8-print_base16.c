@@ -1,24 +1,17 @@
 #include <stdio.h>
-
 /**
- *main - entry point
- *
- *Return: 0 always
+ * main-program entry point.
+ * Return: 0 if no error, non zero if error.
  */
 int main(void)
 {
-		char ch;
-		int n;
-		for (n = 48; n <= 57; n++)
-		{
+	int i;
+	char hexvalues[] = "0123456789abcdef";
 
-			putchar(n);
-		}
-		for (ch = 'a'; ch <= 'f'; ch++)
-		{
-
-			putchar(ch);
-		}
-		putchar(10);
-		return (0);
+	for (i = 0; i < 16; i++)
+	{
+		putchar(hexvalues[i]);
+	}
+	putchar('\n');
+	return (0);
 }
