@@ -1,22 +1,19 @@
 #include <stdio.h>
 
 /**
- *main - entry point
- *
- *Return: 0 after printing the function
+ *main-program entry point.
+ *Return:0 if no error, non zero if error.
  */
 int main(void)
 {
-		char ch;
-		for (ch = 'a'; ch <= 'z'; ch++)
+	char i;
 
-		{
-			if (ch != 'q' && ch != 'e')
-			{
-				putcha(ch);
-			}
-		}
-		putchar(10);
-		return (0);
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		if (i == 'e' || i == 'q')
+			continue;
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
 }
-
