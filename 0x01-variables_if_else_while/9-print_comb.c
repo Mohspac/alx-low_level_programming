@@ -1,25 +1,25 @@
 #include <stdio.h>
-
 /**
- *main - entry point
- *
- *Return: 0 always
- */n
-
+ *main-program entry point.
+ *Return:0 success, non zero error.
+ */
 int main(void)
 {
-		int ch;
-		for (ch = 48; ch <= 57; ch++)
+	int num;
 
+	for (num = '0'; num <= '9'; num++)
+	{
+		putchar(num);
+		if (num == '9')
 		{
-
-			putchar(ch);
-			if (ch != 57)
-			{
-			putchar(44)
-			putchar(32);
-			}
+			break;
 		}
-			putchar(10);
-			return (0);
+		else
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
