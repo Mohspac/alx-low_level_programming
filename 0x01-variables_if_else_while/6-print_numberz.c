@@ -1,17 +1,14 @@
 #include <stdio.h>
-
 /**
- *main - entry point
- *
- *Return: 0 always
+ *main-program entry point.
+ *Return:0 no error, non zero if error
  */
 int main(void)
 {
-	int cha;
-	for (ch = 48; ch <= 57; ch++)
-	{
-		putchar(ch);
-	}
-	putcha(10);
+	int i;
+
+	for (i = '0'; i <= '9'; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }
